@@ -53,39 +53,75 @@ class CollectionProductSeeder extends Seeder
 
         // Footwear Category
         Product::create([
-            'name' => 'Classic Leather Sneakers',
+            'name' => 'Perforated White Platform Slip-On Sneakers',
             'brand' => 'Flexaura Shoes',
-            'description' => 'Everyday classic white leather sneakers.',
+            'description' => 'White laser-cut slip-on sneakers with a hidden platform sole.',
             'price' => 89.99,
-            'image' => 'n1.jpg',
+            'image' => 'fw1.jpg',
             'rating' => 5,
             'category' => 'footwear'
         ]);
         Product::create([
-            'name' => 'Runner Pro Active Shoes',
+            'name' => 'Double-Strap Mary Jane Shoes',
             'brand' => 'Flexaura Shoes',
-            'description' => 'Lightweight running shoes for active lifestyle.',
+            'description' => 'Glossy burgundy Mary Janes with chunky lug soles.',
+            'price' => 95.00,
+            'image' => 'fw2.jpg',
+            'rating' => 4,
+            'category' => 'footwear'
+        ]);
+        Product::create([
+            'name' => 'Laser-Cut Breathable High-Top Sneakers',
+            'brand' => 'Flexaura Shoes',
+            'description' => 'Beige high-top sneakers with geometric cutouts and side zip.',
             'price' => 120.00,
-            'image' => 'n2.jpg',
-            'rating' => 4,
-            'category' => 'footwear'
-        ]);
-        Product::create([
-            'name' => 'Formal Oxford Leather Shoes',
-            'brand' => 'Flexaura Shoes',
-            'description' => 'Elegant formal shoes for business wear.',
-            'price' => 150.00,
-            'image' => 'n3.jpg',
+            'image' => 'fw3.jpg',
             'rating' => 5,
             'category' => 'footwear'
         ]);
         Product::create([
-            'name' => 'Casual Slip-on Loafers',
+            'name' => 'Classic Brown Derby Leather Shoes',
             'brand' => 'Flexaura Shoes',
-            'description' => 'Comfortable slip-on loafers for weekend wear.',
-            'price' => 75.00,
-            'image' => 'n4.jpg',
+            'description' => 'Handcrafted chocolate brown derby shoes with polished finish.',
+            'price' => 150.00,
+            'image' => 'fw4.jpg',
+            'rating' => 5,
+            'category' => 'footwear'
+        ]);
+        Product::create([
+            'name' => 'Chunky High-Top Platform Sneakers',
+            'brand' => 'Flexaura Shoes',
+            'description' => 'Bold dad-shoe style high-tops with sculpted white midsole.',
+            'price' => 110.00,
+            'image' => 'fw5.jpg',
             'rating' => 4,
+            'category' => 'footwear'
+        ]);
+        Product::create([
+            'name' => 'Platform Fisherman Lace-Up Shoes',
+            'brand' => 'Flexaura Shoes',
+            'description' => 'Cognac leather fisherman shoes on a cream platform sole.',
+            'price' => 125.00,
+            'image' => 'fw6.jpg',
+            'rating' => 5,
+            'category' => 'footwear'
+        ]);
+        Product::create([
+            'name' => 'Pebbled Leather Ankle Boots',
+            'brand' => 'Flexaura Shoes',
+            'description' => 'Brown pebbled leather lace-up ankle boots with contrast stitching.',
+            'price' => 99.00,
+            'image' => 'fw7.jpg',
+            'rating' => 4,
+            'category' => 'footwear'
+        ]);
+        Product::create([
+            'name' => 'Green Platform High-Top Boots',
+            'brand' => 'Flexaura Shoes',
+            'description' => 'Forest green and black platform boots with heart cutout panels.',
+            'price' => 135.00,
+            'image' => 'fw8.jpg',
+            'rating' => 5,
             'category' => 'footwear'
         ]);
 

@@ -127,6 +127,14 @@
         opacity: 0.9;
     }
 
+    .graphic-layer img.graphic-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+        opacity: 0.95;
+    }
+
     .text-layer {
         margin-top: 10px;
         font-size: 16px;
@@ -238,6 +246,15 @@
         font-weight: 600;
     }
 
+    .graphic-card .graphic-thumb {
+        width: 100%;
+        height: 70px;
+        object-fit: contain;
+        margin-bottom: 8px;
+        border-radius: 6px;
+        background: #f8fafc;
+    }
+
     /* Forms */
     .form-control {
         width: 100%;
@@ -277,6 +294,12 @@
         background: #06665f;
         transform: translateY(-2px);
     }
+
+    .text-color-btn.active {
+        border-color: var(--primary-green) !important;
+        transform: scale(1.15);
+        box-shadow: 0 2px 8px rgba(8, 129, 120, 0.3);
+    }
 </style>
 @endsection
 
@@ -287,7 +310,6 @@
     <div class="preview-panel">
         <div class="preview-card">
             <div class="shirt-wrapper" id="shirt-wrapper">
-                <!-- Base Image -->
                 <img src="{{ asset('img/products/plain-white-shirt.png') }}" class="shirt-base" alt="Plain Shirt">
                 
                 <!-- Graphics & Text Overlays -->
@@ -351,9 +373,41 @@
                     <i class="fas fa-crown"></i>
                     <span>Minimal Crest</span>
                 </div>
-                <div class="graphic-card" data-graphic="Streetwear Box" data-icon="fas fa-square" data-pos="pos-chest-center">
-                    <i class="fas fa-square"></i>
-                    <span>Street Box</span>
+                <div class="graphic-card" data-graphic="Cute Ghost" data-image="cs-cute-ghost.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-cute-ghost.png') }}" alt="Cute Ghost" class="graphic-thumb">
+                    <span>Cute Ghost</span>
+                </div>
+                <div class="graphic-card" data-graphic="Coffee Girl" data-image="cs-coffee-girl.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-coffee-girl.png') }}" alt="Coffee Girl" class="graphic-thumb">
+                    <span>Coffee Girl</span>
+                </div>
+                <div class="graphic-card" data-graphic="Dream It" data-image="cs-dream-it.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-dream-it.png') }}" alt="Dream It" class="graphic-thumb">
+                    <span>Dream It</span>
+                </div>
+                <div class="graphic-card" data-graphic="We Are Wonderful" data-image="cs-wonderful.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-wonderful.png') }}" alt="We Are Wonderful" class="graphic-thumb">
+                    <span>Wonderful</span>
+                </div>
+                <div class="graphic-card" data-graphic="Mood" data-image="cs-mood.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-mood.png') }}" alt="Mood" class="graphic-thumb">
+                    <span>Mood</span>
+                </div>
+                <div class="graphic-card" data-graphic="Moonlight" data-image="cs-moonlight.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-moonlight.png') }}" alt="Moonlight" class="graphic-thumb">
+                    <span>Moonlight</span>
+                </div>
+                <div class="graphic-card" data-graphic="Good Vibes" data-image="cs-good-vibes.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-good-vibes.png') }}" alt="Good Vibes" class="graphic-thumb">
+                    <span>Good Vibes</span>
+                </div>
+                <div class="graphic-card" data-graphic="I'm Pine" data-image="cs-pine.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-pine.png') }}" alt="I'm Pine" class="graphic-thumb">
+                    <span>I'm Pine</span>
+                </div>
+                <div class="graphic-card" data-graphic="Rise & Shine" data-image="cs-rise-shine.png" data-pos="pos-chest-center">
+                    <img src="{{ asset('img/custom-graphics/cs-rise-shine.png') }}" alt="Rise & Shine" class="graphic-thumb">
+                    <span>Rise & Shine</span>
                 </div>
             </div>
         </div>
@@ -362,6 +416,24 @@
         <div class="control-group">
             <h3>3. Custom Name/Text</h3>
             <input type="text" id="custom-text-input" class="form-control" placeholder="Type Your Custom Name/Text" maxlength="15">
+            
+            <div style="margin-top: 15px;">
+                <h4 style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Text Color</h4>
+                <div class="text-color-options" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <div class="text-color-btn active" data-color="#333333" style="background: #333333; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s;" title="Dark Charcoal"></div>
+                    <div class="text-color-btn" data-color="#ffffff" style="background: #ffffff; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s;" title="White"></div>
+                    <div class="text-color-btn" data-color="#ef4444" style="background: #ef4444; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s;" title="Red"></div>
+                    <div class="text-color-btn" data-color="#3b82f6" style="background: #3b82f6; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s;" title="Blue"></div>
+                    <div class="text-color-btn" data-color="#eab308" style="background: #eab308; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s;" title="Yellow"></div>
+                    <div class="text-color-btn" data-color="#22c55e" style="background: #22c55e; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border-color); cursor: pointer; transition: all 0.2s;" title="Green"></div>
+                    
+                    <!-- Custom Color Picker -->
+                    <div style="position: relative; display: flex; align-items: center; gap: 5px;">
+                        <input type="color" id="text-color-picker" value="#333333" style="width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--border-color); padding: 0; cursor: pointer; background: none; overflow: hidden; outline: none;">
+                        <span style="font-size: 12px; color: var(--text-muted); font-weight: 500;">Custom</span>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- 4. Size Selection -->
@@ -390,13 +462,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlayContainer = document.getElementById('overlay-container');
     const graphicLayer = document.getElementById('graphic-layer');
     const textLayer = document.getElementById('text-layer');
-    const shirtBase = document.querySelector('.shirt-base');
     
     const colorBtns = document.querySelectorAll('.color-btn');
     const graphicCards = document.querySelectorAll('.graphic-card');
     const textInput = document.getElementById('custom-text-input');
     const sizeSelect = document.getElementById('size-select');
     const addToCartBtn = document.getElementById('add-to-cart-btn');
+    
+    const textColorBtns = document.querySelectorAll('.text-color-btn');
+    const textColorPicker = document.getElementById('text-color-picker');
     
     // State Tracking
     let state = {
@@ -405,8 +479,10 @@ document.addEventListener('DOMContentLoaded', function() {
         isDark: false,
         graphicName: 'None',
         graphicIcon: '',
+        graphicImage: '',
         graphicPos: 'pos-chest-center',
         text: '',
+        textColor: '#333333',
         size: 'M'
     };
 
@@ -434,11 +510,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update State
             state.graphicName = this.getAttribute('data-graphic');
-            state.graphicIcon = this.getAttribute('data-icon');
+            state.graphicIcon = this.getAttribute('data-icon') || '';
+            state.graphicImage = this.getAttribute('data-image') || '';
             state.graphicPos = this.getAttribute('data-pos');
             
             // Apply Graphic
-            if(state.graphicIcon) {
+            if (state.graphicImage) {
+                graphicLayer.innerHTML = `<img src="{{ asset('img/custom-graphics') }}/${state.graphicImage}" alt="${state.graphicName}" class="graphic-image">`;
+            } else if (state.graphicIcon) {
                 graphicLayer.innerHTML = `<i class="${state.graphicIcon}"></i>`;
             } else {
                 graphicLayer.innerHTML = '';
@@ -455,6 +534,26 @@ document.addEventListener('DOMContentLoaded', function() {
         textLayer.textContent = state.text;
     });
 
+    // Text Color Options Click Event
+    textColorBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            textColorBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const selectedColor = this.getAttribute('data-color');
+            state.textColor = selectedColor;
+            textColorPicker.value = selectedColor;
+            textLayer.style.color = selectedColor;
+        });
+    });
+
+    // Text Color Picker Input Event
+    textColorPicker.addEventListener('input', function() {
+        textColorBtns.forEach(b => b.classList.remove('active'));
+        state.textColor = this.value;
+        textLayer.style.color = this.value;
+    });
+
     // 4. Size Change Event
     sizeSelect.addEventListener('change', function() {
         state.size = this.value;
@@ -466,6 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
             color: state.colorName,
             graphic: state.graphicName,
             text: state.text,
+            textColor: state.textColor,
             size: state.size,
             _token: '{{ csrf_token() }}'
         };

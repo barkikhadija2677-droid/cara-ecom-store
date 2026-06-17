@@ -63,11 +63,12 @@ class CartController extends Controller
         $color = $request->input('color', 'White');
         $size = $request->input('size', 'M');
         $text = $request->input('text', '');
+        $textColor = $request->input('textColor', '#333333');
         $graphic = $request->input('graphic', 'None');
         
         $name = "Custom Shirt - {$color}";
         if (!empty($text)) {
-            $name .= " - Text: '{$text}'";
+            $name .= " - Text: '{$text}' (Color: {$textColor})";
         }
         $name .= " ({$size})";
         
